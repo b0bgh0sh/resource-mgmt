@@ -1,0 +1,135 @@
+.search {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 70%;
+  }
+  .searchCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 4%;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .row {
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 0;
+  }
+  .title {
+    margin: 7px;
+  }
+  .searchBox {
+    width: 110px;
+    height: 35px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 7px;
+    padding-left: 10;
+  }
+  .header {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  table {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    td,
+    th {
+      margin-top: 1px;
+      border-bottom: 1px solid #dddddd;
+      text-align: left;
+      padding: 1px;
+    }
+    button {
+      border: none;
+    }
+    .checkBoxContainer {
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      input {
+        display: none;
+        &:checked {
+          cursor: pointer;
+          + .checkMark {
+            background-color: #4caf50;
+            &:after {
+              position: relative;
+              content: '';
+              display: block;
+              left: 6px;
+              top: 2px;
+              width: 7px;
+              height: 12px;
+              border: solid white;
+              border-width: 0 3px 3px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+      .checkMark {
+        display: block;
+        border-style: solid;
+        border-color: #4caf50;
+        border-width: 2px;
+        width: 22px;
+        height: 22px;
+        //background-color: #eee;
+        border-radius: 5px;
+        position: relative;
+        &:hover {
+          background-color: rgb(243, 242, 242);
+        }
+      }
+    }
+    .progress {
+      width: 100%;
+      background-color: #e2e2e2;
+      position: relative;
+      border-radius: 3px;
+      height: 20px;
+      .bar {
+        max-width: 0%;
+        height: 100%;
+        z-index: 0;
+        background-color: #72ac74;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        animation: transform 1000ms ease-in-out forwards;
+        @keyframes transform {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      }
+      p {
+        position: absolute;
+        margin-top: 2px;
+        left: 40%;
+        color: black;
+        z-index: 1;
+      }
+    }
+  }
+}

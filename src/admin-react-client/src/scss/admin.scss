@@ -1,0 +1,10 @@
+.barContent {
+  align-content: center;
+  .item {
+    color: white;
+    margin-right: 10px;
+    &:hover {
+      color: grey;
+    }
+  }
+}

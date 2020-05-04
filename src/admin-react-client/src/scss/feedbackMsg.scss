@@ -1,0 +1,36 @@
+.msgContainer {
+  position: fixed;
+  left: 40%;
+  top: 30%;
+  z-index: 1000;
+}
+.success {
+  margin: 10px;
+  padding: 20px;
+  background-color: #55F096;
+  color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.error {
+  margin: 10px;
+  padding: 20px;
+  background-color: #E2275D;
+  color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}

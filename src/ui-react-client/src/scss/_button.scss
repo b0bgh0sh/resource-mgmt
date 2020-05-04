@@ -1,0 +1,111 @@
+@import 'config';
+%btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+  &:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+  }
+}
+.btn-red {
+  @extend %btn;
+  background-color: $error-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($error-color, 10%);
+  }
+}
+.btn-green {
+  @extend %btn;
+  background-color: $success-color;
+  color: white;
+  &:hover {
+    background-color: darken($success-color, 10%);
+  }
+}
+.btn-blue {
+  @extend %btn;
+  background-color: $info-color;
+  color: white;
+  &:hover {
+    background-color: darken($info-color, 10%);
+  }
+}
+.btn-orange {
+  @extend %btn;
+  background-color: $warning-color;
+  color: white;
+  &:hover {
+    background-color: darken($warning-color, 10%);
+  }
+}
+.btn-infoGreen {
+  @extend %btn;
+  background-color: $infoGreen-color;
+  color: white;
+  &:hover {
+    background-color: darken($infoGreen-color, 10%);
+  }
+}
+.btn-purple {
+  @extend %btn;
+  background-color: $purple-color;
+  color: white;
+  &:hover {
+    background-color: darken($purple-color, 1%);
+  }
+}
+.btn-cancel {
+  @extend %btn;
+  background-color: $cancel-color;
+  color: white;
+  &:hover {
+    background-color: darken($cancel-color, 1%);
+  }
+}
+.swipe-button {
+  height: 23px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  .content {
+    display: flex;
+    flex-direction: column;
+    transition: transform 300ms ease-in-out;
+    transform: translateY(0px);
+    align-items: center;
+    .btn-red {
+      padding: 0px 10px;
+      text-align: center;
+      align-content: center;
+      background-color: $warning-color;
+      margin: 0;
+    }
+    .btn-green {
+      padding: 0px 10px;
+      text-align: center;
+      align-content: center;
+      margin: 0;
+    }
+    .btn-blue {
+      padding: 0px 10px;
+      text-align: center;
+      align-content: center;
+      margin: 0;
+    }
+    .btn-cancel {
+      padding: 0px 10px;
+      text-align: center;
+      align-content: center;
+      margin: 0;
+    }
+  }
+}
+
+.select-box {
+}

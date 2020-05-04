@@ -1,0 +1,62 @@
+.msgContainer {
+  position: fixed;
+  left: 30%;
+  top: 10%;
+  z-index: 11;
+}
+.success {
+  margin: 10px;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+}
+.error {
+  margin: 10px;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 10px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}
+
+// .message {
+//   .ant-message-notice-content {
+//     padding: 12px 16px;
+//     border-radius: 4px;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+//     background: #fff;
+//     display: inline-block;
+//     pointer-events: all;
+
+//     .ant-message-custom-content {
+//       font-size: 13px;
+//       color: green;
+//       .anticon {
+//         margin-right: 8px;
+//         font-size: 15px;
+//         top: 1px;
+//         position: relative;
+//       }
+
+//       &.ant-message-error {
+//         .anticon {
+//           color: red;
+//         }
+//       }
+//     }
+//   }
+// }
