@@ -1,6 +1,6 @@
 # UBC-2020 Blueprint
 
-This document is a project blueprint for the CPSC 319 Resource Management System project. The purpose of the document is to provide the teams with a starting point, and some guidance on the project structure.
+This document is a project blueprint for the CPSC 319 Resource Management System project. 
 
 ## Prerequisites
 
