@@ -140,7 +140,7 @@ namespace Web.API.Infrastructure.Data
 			return await connection.QueryAsync<UserUtil>(sql, new { Project = project });
 		}
 
-		public async Task<IEnumerable<OrgUtil>> ForecastOrganization(string org, int year, int hours)
+		public async Task<IEnumerable<OrgUtil>> ForecastOrganization(string org, int year)
 		{
 			var sql = @"
                 declare @table2 table (username nvarchar(max),  jan  float, feb float, mar float, apr float, may float,
@@ -184,11 +184,11 @@ namespace Web.API.Infrastructure.Data
 					        
 				END
 				INSERT INTO @table2
-                Select username, ROUND(ISNULL([1]/cast(@Hours as float), 0), 1) as jan, ROUND(ISNULL([2]/cast(@Hours as float), 0),1)
-				as feb, ROUND(ISNULL([3]/cast(@Hours as float), 0),1) as mar, ROUND(ISNULL([4]/cast(@Hours as float), 0),1) as apr,
-                ROUND(ISNULL([5]/cast(@Hours as float), 0),1) as may, ROUND(ISNULL([6]/cast(@Hours as float), 0),1) as jun, 
-				ROUND(ISNULL([7]/cast(@Hours as float), 0),1) as jul, ROUND(ISNULL([8]/cast(@Hours as float), 0),1) as aug, ROUND(ISNULL([9]/cast(@Hours as float), 0),1) as sep,
-                ROUND(ISNULL([10]/cast(@Hours as float), 0),1) as oct, ROUND(ISNULL([11]/cast(@Hours as float), 0),1) as nov, ROUND(ISNULL([12]/cast(@Hours as float), 0),1) as dec
+                Select username, ROUND(ISNULL([1]/176.0, 0), 1) as jan, ROUND(ISNULL([2]/176.0, 0),1)
+				as feb, ROUND(ISNULL([3]/176.0, 0),1) as mar, ROUND(ISNULL([4]/176.0, 0),1) as apr,
+                ROUND(ISNULL([5]/176.0, 0),1) as may, ROUND(ISNULL([6]/176.0, 0),1) as jun, ROUND(ISNULL([7]/176.0, 0),1)
+				as jul, ROUND(ISNULL([8]/176.0, 0),1) as aug, ROUND(ISNULL([9]/176.0, 0),1) as sep,
+                ROUND(ISNULL([10]/176.0, 0),1) as oct, ROUND(ISNULL([11]/176.0, 0),1) as nov, ROUND(ISNULL([12]/176.0, 0),1) as dec
                 FROM
                 (select username, month, coalesce(hours, 0) as hours from @table) AS SourceTable
                 PIVOT (
@@ -205,7 +205,7 @@ namespace Web.API.Infrastructure.Data
 
 			using var connection = new SqlConnection(connectionString);
 			connection.Open();
-			return await connection.QueryAsync<OrgUtil>(sql, new { Org = org, Year = year, Hours = hours });
+			return await connection.QueryAsync<OrgUtil>(sql, new { Org = org, Year = year });
 		}
 
 	}

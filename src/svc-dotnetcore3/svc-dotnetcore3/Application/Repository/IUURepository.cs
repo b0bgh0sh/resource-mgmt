@@ -8,6 +8,6 @@ namespace Web.API.Application.Repository
     {
         Task<IEnumerable<UserUtil>> GetUserUtil(string username);
         Task<IEnumerable<UserUtil>> GetProjectData(string project);
-        Task<IEnumerable<OrgUtil>> ForecastOrganization(string org, int year, int hours);
+        Task<IEnumerable<OrgUtil>> ForecastOrganization(string org, int year);
     }
 }
